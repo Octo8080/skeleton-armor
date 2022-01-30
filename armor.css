@@ -1,0 +1,41 @@
+:root {
+  --clip-border-color: #e1e1e1;
+  --clip-bg-head-color: #c1c1c1;
+}
+
+div.clip {
+  margin: 1rem 0;
+  border: 3px;
+  border-color: var(--clip-border-color);
+  border-style: solid;
+  border-radius: 6px;
+  transition: max-height 1s ease-out;
+}
+
+div.clip > h1,h2,h3,h4,h5,h6 {
+  margin: auto;
+}
+
+div.clip > div.clip-head {
+  padding: 0.5rem 1rem;
+  margin: 0;
+  background-color: var(--clip-bg-head-color);
+  border-width: 0 0 3px 0;
+  border-color: var(--clip-border-color);
+  border-style: solid;
+  border-radius: calc(0.25rem) calc(0.25rem) 0 0;
+}
+
+div.clip > div.clip-body {
+  padding: 1.0rem;
+}
+
+div.clip.switch, div.clip.switch-auto {
+  max-height: 150px;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+div.clip.switch.on, div.clip.switch-auto:hover {
+    max-height: 100vh;
+}
