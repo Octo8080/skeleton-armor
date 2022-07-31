@@ -1,6 +1,11 @@
 :root {
   --clip-border-color: #e1e1e1;
   --clip-bg-head-color: #c1c1c1;
+  --text-color: #191919;
+}
+
+* {
+  color: var(--text-color);
 }
 
 div.clip {
@@ -38,4 +43,54 @@ div.clip.switch, div.clip.switch-auto {
 
 div.clip.switch.on, div.clip.switch-auto:hover {
     max-height: 100vh;
+}
+
+
+div.app-bar {
+  min-height: 64px;
+  border-bottom: 2px solid var(--clip-border-color); ;
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  justify-content: flex-start; 
+  text-align: center;
+  vertical-align:middle;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+div.app-bar > div.app-bar-title {
+  text-align: center;
+  margin: 0 24px 0 0;
+  display:table-cell;
+  vertical-align:middle;
+}
+
+div.app-bar > div.app-bar-items {
+  text-align: center;
+  margin: 0 24px 0 0;
+  display:table-cell;
+  vertical-align:middle;
+  display: flex;
+}
+
+
+div.app-bar-items > div.app-bar-item {
+  text-align: center;
+  margin: 0 10px;
+  display:table-cell;
+  vertical-align:middle;
+  font-size: 18px;
+}
+
+div.app-bar-items :first-of-type {
+  margin-left: 0 !important; 
+}
+
+
+div.app-bar a:link, a:visited, a:hover, a:active  {
+  color: var(--text-color);
+  text-decoration: none;
 }
